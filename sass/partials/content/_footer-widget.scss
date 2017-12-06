@@ -1,0 +1,19 @@
+// ***** FOOTER WIDGET SECTION ***** //
+
+.footer-widget{
+  padding-bottom: 2px;
+  padding-top: 20px;
+  line-height: 1.5;
+  @include font-size(0.875);
+  
+  .widget {
+    padding-bottom: 15px;
+  }
+
+  .contact-list{
+    i{
+      padding: 5px 15px 5px 5px;
+      @include font-size(1);
+    }
+  }
+}

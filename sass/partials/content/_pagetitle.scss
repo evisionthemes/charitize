@@ -1,0 +1,23 @@
+// ***** SINGLE PAGE TITLE SECTION ***** //
+
+.page-inner-title {
+  @include cover-background();
+  background-color: lighten($color__background_base_dark, 30%);
+  background-position: center center;
+  background-repeat: repeat;
+  color: $color__text-white;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  position: relative;
+  width:100%;
+  @include transition(background-position 0.5s linear);
+  .taxonomy-description{
+	color: $color__text-white;
+  }  
+  .entry-header{
+  	.entry-title{
+  	  @extend .taxonomy-description;
+	  text-transform: uppercase;
+  	}
+  }
+}

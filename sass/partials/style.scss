@@ -1,0 +1,76 @@
+/*
+Theme Name: Charitize
+Theme URI: http://evisionthemes.com/product/charitize-free-theme/
+Author: evisiontheme
+Author URI: http://evisionthemes.com/
+Description: Charitize, a simple & clean WordPress theme for all the Non-Profit Organizations, Non-Profit Associations, Foundations or churches, political parties etc. With lots of customization features, you can easily built a professional website for your organization. This theme supports most of the popular plugins like contact from 7, jetpack, PS sitemap etc.
+Version: 1.0.6
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: charitize
+Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, post-formats, sticky-post, translation-ready, theme-options, threaded-comments
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Charitize is based on Underscores http://underscores.me/, (C)  2012-2014 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/**
+*Table Of Contents
+
+1.0 Normalize
+2.0 Global
+3.0 Media
+4.0 Widget
+5.0 Content
+6.0 elements
+
+*/
+
+@import "variables/variables";
+
+@import "mixins/mixins";
+
+/**
+*1.0 Normalize
+*/
+
+@import "normalize/normalize";
+
+/**
+*2.0 Global
+*/
+
+@import "global/global";
+
+/**
+*3.0 Content
+*/
+
+@import "media/media";
+
+/**
+*4.0 Content
+*/
+
+@import "widget/widget";
+
+/**
+*5.0 Content
+*/
+
+@import "content/content";
+
+/**
+*6.0 Content
+*/
+
+@import "elements/elements";
+
+/*==== HAPPY STYLING!!! ===*/
+/*=========================*/

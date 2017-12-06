@@ -1,0 +1,44 @@
+article.hentry {
+  .blog &,
+  #blog-post &,
+  .search &,
+  .archive &,
+  .tag &,
+  .category &,
+  #ak-blog-post &,
+  .page &,
+  .single &,
+  .woocommerce &{
+    @extend .widget;
+    margin-bottom: 1em;
+    padding: 15px;
+  }
+}
+.entry-title{
+  .search article.hentry &,
+  .page article.hentry &,
+  .blog article.hentry,
+  .archive article.hentry,
+  .single article.hentry{
+    @include font-size(1.5);
+    text-transform: inherit;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  a{
+    color: $color__text-title;
+    text-transform: capitalize;
+  }
+  .format-aside &{
+      .blog &,
+      .archive &{
+        display: none;
+      }
+  }
+}
+
+.woocommerce {
+  .site-main {
+    @extend .widget;
+  }
+}

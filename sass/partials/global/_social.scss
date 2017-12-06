@@ -1,0 +1,300 @@
+.evision-social-section{
+  @include mf-mobile-device(){
+    position: fixed;
+    right: 15px;
+    z-index: 9999;
+  }
+  @include mobile-device(){
+    border-color: darken($color__text_base_light, 20%);
+    border-style: solid;
+    border-width: 1px 0;
+    text-align: center;
+  }
+
+  ul{
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 17px;
+    padding-left: 0;
+    @include mobile-device(){
+      margin-bottom: 7px;
+      margin-top: 7px;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    li{
+      vertical-align: middle;
+      margin-bottom: 1px;
+      position: relative;
+      @include mobile-device(){
+        display: inline-block;  
+      }
+    }
+
+    a{
+      position: relative;
+      color: $color__text_base_light;
+      span{
+        bottom: 0;
+        background-color: lighten($color__background_base_dark, 20%);
+        display: inline-block;
+        min-height: 30px;
+        position: absolute;
+        padding: 7px 10px 8px;
+        right: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include border-radius(2px);
+        @include font-size(0);
+        @include opacity(0);
+        @include transition(font-size 0.2s ease-in-out, opacity 0.2s ease-in-out);
+        &:after{
+          border-left: 6px solid lighten($color__border_base_dark, 20%);
+          border-top: 6px solid transparent;
+          border-bottom: 6px solid transparent;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          right: -5px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          height: 6px;
+        }
+      }
+      &:after{
+        border: 2px solid lighten($color__link, 100%);
+        color: $color__text_base_light;
+        display: inline-block;
+        font-family: $font__icon;
+        font-weight: 400;
+        height: 46px;
+        margin-left: 5px;
+        margin-right: 5px;
+        line-height: 46px;
+        text-align: center;
+        width: 46px;
+        @include border-radius(100%);
+        @include font-size(1.125);
+        @include transition(0.5s ease-in-out);
+        @include trasparent-bg(background-color, black, 0.5);
+        @include mobile-device(){
+          height: 36px;
+          width: 36px;
+          line-height: 32px;
+          background-color: transparent;
+          color: darken($color__text_base_light, 20%);
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:active{
+        span{
+          bottom: 0;
+          right: 100%;
+          top: 0;
+          @include font-size(0.813);
+          @include opacity(1);
+        }
+        &:after{
+          border-color: darken($color__text_base_light, 40%);
+          background-color: $color__background_base_light;
+        }
+      }
+    }
+
+    a[href*="facebook.com"]:after {
+      content: "\f09a";
+    }
+
+    a[href*="twitter.com"]:after {
+      content: "\f099";
+    }
+
+    a[href*="linkedin.com"]:after {
+      content: "\f0e1";
+    }
+
+    a[href*="instagram.com"]:after {
+      content: "\f16d";
+    }
+
+    a[href*="youtube.com"]:after {
+      content: "\f167";
+    }
+
+    a[href*="plus.google.com"]:after {
+      content: "\f0d5";
+    }
+
+    a[href*="pinterest.com"]:after {
+      content: "\f0d2";
+    }
+
+    a[href*="flickr.com"]:after {
+      content: "\f16e";
+    }
+
+    a[href*="tumblr.com"]:after {
+      content: "\f173";
+    }
+
+    a[href*="wordpress.org"]:after {
+      content: "\f19a";
+    }
+
+    a[href*="wordpress.com"]:after {
+      content: "\f19a";
+    }
+
+    a[href*="soundcloud.com"]:after {
+      content: "\f1be";
+    }
+
+    a[href*="dribbble.com"]:after {
+      content: "\f17d";
+    }
+
+    a[href*="digg.com"]:after {
+      content: "\f1a6";
+    }
+
+    a[href*="behance.net"]:after {
+      content: "\f1b4";
+    }
+
+    a[href*="vine.co"]:after {
+      content: "\f1ca";
+    }
+
+    a[href*="snapchat.com"]:after {
+      content: "\f2ab";
+    }
+
+    a[href*="reddit.com"]:after {
+      content: "\f1a1";
+    }
+
+    a[href*="medium.com"]:after {
+      content: "\f23a";
+    }
+
+    a[href*="whatsapp.com"]:after {
+      content: "\f232";
+    }
+
+    a[href*="slack.com"]:after {
+      content: "\f198";
+    }
+
+    a[href*="vk.com"]:after {
+      content: "\f189";
+    }
+
+    /*----------------------*/
+
+    a:hover[href*="facebook.com"]:after {
+      color: #3C579E !important;
+    }
+
+    a:hover[href*="twitter.com"]:after {
+      color: #01BBF6 !important;
+    }
+
+    a:hover[href*="linkedin.com"]:after {
+      color: #1484C3 !important;
+    }
+
+    a:hover[href*="instagram.com"]:after {
+      color: #2D6A93 !important;
+    }
+
+    a:hover[href*="youtube.com"]:after {
+      color: #D62424 !important;
+    }
+
+    a:hover[href*="pinterest.com"]:after {
+      color: #BD2126 !important;
+    }
+
+    a:hover[href*="plus.google.com"]:after {
+      color: #D73D32 !important;
+    }
+
+    a:hover[href*="flickr.com"]:after {
+      color: #FD0083 !important;
+    }
+
+    a:hover[href*="tumblr.com"]:after {
+      color: #34465D !important;
+    }
+
+    a:hover[href*="wordpress.org"]:after {
+      color: #3480A3 !important;
+    }
+
+    a:hover[href*="wordpress.com"]:after {
+      color: #3480A4 !important;
+    }
+
+    a:hover[href*="soundcloud.com"]:after {
+      color: #FF4E00 !important; 
+    }
+
+    a:hover[href*="dribbble.com"]:after {
+      color: #EE6D9E !important; 
+    }
+
+    a:hover[href*="digg.com"]:after {
+      color: #000000 !important;
+    }
+
+    a:hover[href*="behance.net"]:after {
+      color: #131418 !important;
+    }
+
+    a:hover[href*="vine.co"]:after {
+      color: #00BF8F !important;
+    }
+
+    a:hover[href*="snapchat.com"]:after {
+      color: #FF5500 !important;
+    }
+
+    a:hover[href*="reddit.com"]:after {
+      color: #CEE3F8 !important;
+    }
+
+    a:hover[href*="medium.com"]:after {
+      color: #02B875 !important;
+    }
+
+    a:hover[href*="whatsapp.com"]:after {
+      color: #4EC65A !important;
+    }
+
+    a:hover[href*="slack.com"]:after {
+      color: #56B68B !important;
+    }
+
+    a:hover[href*="vk.com"]:after {
+      color: #537599 !important;
+    }
+  }
+
+  // &.social-icon-only {
+  //   a{
+  //     font-size: 0;
+  //   }
+  // }
+}
+
+.alternate-border ul a{
+  &:after{
+    border: 2px solid red !important;
+  }
+
+}

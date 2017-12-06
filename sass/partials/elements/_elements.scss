@@ -1,0 +1,57 @@
+// ***** CUSTOM STYLE ***** //
+
+// thumb overlay
+.thumb-overlay {
+  background: rgba(0,0,0,0.4);
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  &.main-slider-overlay{
+  	background: rgba(30,65,78,0.65);
+  }
+}
+
+
+// filter
+img.desaturate{
+  @include filter(grayscale, 100%);
+  @include transition(1s linear);
+}
+
+// floatleft
+
+.f-left{
+  float: left;
+}
+
+.f-right{
+  float: left;
+}
+
+.f-none{
+  float: none;
+}
+
+// woocommerce compatibility
+.woocommerce {
+  li.product{
+    a.button {
+      @extend .button;
+      padding: 11px 15px 12px;
+      @include font-size(0.813);
+    }
+  }
+  .header-btn {
+    a.button {
+      @extend .button;
+    }
+  }
+  .site-main {
+    @extend .widget;
+  }
+  .woocommerce-pagination {
+    margin-bottom: 15px;
+  }
+}

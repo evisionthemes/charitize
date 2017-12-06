@@ -1,0 +1,69 @@
+form {
+  position: relative;
+}
+
+input {
+  border: 1px solid $color__background-hr;
+  color: $color__text-input;
+  @include font-size(1);
+  padding: 8px 15px;
+  outline: 0;
+  height: inherit;
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+textarea {
+  color: $color__text-input;
+  border: 1px solid $color__background-hr;
+  background-color: #F7F7F7;
+  box-sizing: border-box;
+  padding: 8px 5px 8px 15px;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  color: $color__text-input-focus;
+  background-color: $color__background-body;
+  -webkit-appearance: none;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+}
+
+select:focus {
+  outline: none;
+}

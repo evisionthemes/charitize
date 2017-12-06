@@ -1,0 +1,121 @@
+.widget{
+   margin-bottom: 20px;
+   padding: 15px 15px 1.875em 15px;
+
+
+  select{
+    max-width: 100%;
+    padding: 7px 15px 8px;
+  }
+
+  li{
+    border-top: 1px solid $color__background-hr;
+    &:first-child{
+      border-top: none;
+    }
+    a{
+      &:hover{
+        color: $color__text-primary;
+      }
+    }
+  }
+
+  /*search widget*/
+  .search-form{
+    label{
+      width: 68%; /*fallback*/
+      width: calc(100% - 106px);
+    }
+    .search-field{
+      @include font-size(0.875);
+      background-color: $color__background-body;
+      border: 2px solid $color__background-hr;
+      color: #b4b4b4;
+      height: 52px;
+    }
+    .search-submit{
+      background: $color__background-button;
+      border: none;
+      color: $color__text-button;
+      height: 52px;
+      width: 102px;
+      padding: 0;
+      @include font-size(0.875);
+      &:focus{
+        @extend .search-submit;
+      }
+      &:hover{
+        background: $color__background-button;
+        @include box-shadow(inset 0 -3px 0 rgba(0, 0, 0, 0.5));
+        color: $color__text-button-hover;
+      }
+    }
+  }
+}
+
+/*widget categories*/
+.widget_categories .children,
+.widget_nav_menu .sub-menu,
+.widget_pages .children {
+  margin: 0.4688em 0 0 1em;
+  padding-top: 0.4688em;
+}
+
+/*widget rss*/
+.widget_rss {
+  ul {
+    list-style: none;
+    margin: 0;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  li{
+    margin-bottom: 1.6em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .rsswidget{
+    border: 0;
+    font-weight: 700;
+    img{
+      margin-top: -4px;
+    }
+    .rss-date,
+    cite {
+      display: block;
+      font-style: normal;
+      line-height: 2;
+      opacity: 0.8;
+    }
+  }
+}
+
+/*widget calendar*/
+
+.widget_calendar {
+  td,
+  th {
+    border: 1px solid #ededed;
+  }
+
+  tbody{
+   a {
+      background-color: $color__background-primary;
+      color: #ffffff;
+      &:hover,
+      &:focus{
+        background-color: #707070;
+        color: #ffffff;
+      }
+    }
+  }
+
+  caption {
+    font-weight: 600;
+    margin: 0 0 1.6em;
+  }
+}

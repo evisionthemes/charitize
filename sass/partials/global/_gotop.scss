@@ -1,0 +1,26 @@
+/*back-to-top section*/
+.evision-back-to-top {
+  background-color: $color__background-primary;
+  bottom: -100px;
+  color: $color__text_base_light;
+  display: inline-block;
+  padding: 0 13px;
+  position: fixed;
+  right: 20px;
+  z-index: 9999;
+  @include border-radius(2px);
+  @include font-size(1.750);
+  @include transition( bottom 0.5s linear, opacity 0.5s linear, border-radius 0.5s linear);
+  &:focus,
+  &:visited{
+    @extend .evision-back-to-top;
+  }
+  &:hover,
+  &:active{
+    background-color: $color__background-primary;
+    @include border-radius(100%);
+  }
+  i{
+    color: $color__text_base_light;
+  }
+}

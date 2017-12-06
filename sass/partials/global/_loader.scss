@@ -1,0 +1,68 @@
+/*Loader section*/
+
+// keyframes
+@include keyframes(circle-move1){
+  0%{cx: 5;opacity: 0;} 25%{transform:scale(1.2);}50%{cx: 105;opacity: 1;}95%{cx: 235;}100%{opacity: 0;}
+}
+@include keyframes(circle-move2) {
+  0%{cx: 20;opacity: 0;} 25%{transform:scale(1.2);}50%{cx: 120;opacity: 1;}95%{cx: 250;}100%{opacity: 0;}
+}
+@include keyframes(circle-move3) {
+  0%{cx: 35;opacity: 0;} 25%{transform:scale(1.2);}50%{cx: 135;opacity: 1;}95%{cx: 265;}100%{opacity: 0;}
+}
+@include keyframes(circle-move4) {
+  0%{cx: 50;opacity: 0;} 25%{transform:scale(1.2);}50%{cx: 150;opacity: 1;}95%{cx: 280;}100%{opacity: 0;}
+}
+@include keyframes(circle-move5) {
+  0%{cx: 65;opacity: 0;} 25%{transform:scale(1.2);}50%{cx: 165;opacity: 1;}95%{cx: 295;}100%{opacity: 0;}
+}
+
+%centerblock{
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.wraploader{
+  background-color: $color__background-primary;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  z-index: 99999;
+  @include border-box();
+  @extend %centerblock;
+  .loader-outer{
+    height: 50px;
+    margin: auto;
+    position: absolute;
+    width: 320px;
+    @extend %centerblock;
+    #wrapcircle{     
+      padding: 20px 15px 40px;
+      width: 100%;
+      @include border-box();
+      circle{
+        opacity: 0;
+      }
+      
+      #fifthcircle {
+        @include animation(circle-move5 4s ease-in-out 0s infinite);
+      }
+      #forthcircle {
+        @include animation(circle-move4 4s ease-in-out 0.2s infinite);
+      }
+      #thirthcircle {
+        @include animation(circle-move3 4s ease-in-out 0.4s infinite);
+      }
+      #secondcircle {
+        @include animation(circle-move2 4s ease-in-out 0.6s infinite);
+      }
+      #firstcircle {
+        @include animation(circle-move1 4s ease-in-out 0.8s infinite);
+      }
+    }
+  }
+}

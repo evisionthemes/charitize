@@ -1,0 +1,23 @@
+table,
+td,
+th {
+  border: 1px solid #ededed;
+  color: #565656;
+}
+
+table {
+  border-width: 1px 0 0 1px;
+}
+
+th {
+  border-width: 0 1px 1px 0;
+  font-weight: 700;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}

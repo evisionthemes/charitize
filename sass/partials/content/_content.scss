@@ -1,0 +1,133 @@
+.site-content{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  width: $size__site-main;
+  @include clearfix;
+  body.home & {
+    max-width: auto;
+    padding: 0;
+  }
+
+  body.home.blog & {
+    max-width: 1200px;
+    padding-top: 40px;
+  }
+
+  #primary,
+  #secondary{
+    float: left;
+    @include border-box();
+    @include mobile-device(){
+      float: none;
+      width: $size__site-main;
+    }
+  }
+}
+
+/*sidebar postion options*/
+
+#primary {
+  /*right*/
+  width: $size__site-primary;
+  padding-right: 5%;
+
+  /*left*/
+  body.evision-left-sidebar &{
+    float: right;
+    padding-left: 5%;
+  }
+
+  /*none*/
+  body.evision-no-sidebar &{
+    width: $size__site-main;
+  }
+}
+
+#secondary {
+  /*right*/
+  width: $size__site-sidebar;
+
+  @include mobile-device(){
+    margin-top: 50px;
+  }
+
+  /*left*/
+  body.evision-left-sidebar &{
+    float: left;
+  }
+
+  /*none*/
+  body.evision-no-sidebar &{
+    display: none;
+  }
+
+  body.home.page & {
+    width: 100%;
+  }
+}
+
+@include mobile-device(){
+  
+  body.evision-left-sidebar,
+  body.evision-no-sidebar{
+    #primary,
+    #secondary{
+      float: none;
+      width: $size__site-main;
+    }  
+  }
+}
+
+/* ==================================*/
+
+@import "header";
+
+/* ==================================*/
+
+@import "navigation";
+
+/* ==================================*/
+
+@import "main-slider";
+
+/* ==================================*/
+
+@import "activities";
+
+/* ==================================*/
+
+@import "callback";
+
+/* ==================================*/
+
+@import "footer-widget";
+
+/* ==================================*/
+
+@import "articles";
+
+/* ==================================*/
+
+@import "post-page";
+
+/* ==================================*/
+
+@import "aside";
+
+/* ==================================*/
+
+@import "footer";
+
+/* ==================================*/
+
+@import "pagetitle";
+
+/* ==================================*/
+
+@import "breadcrumb";
+

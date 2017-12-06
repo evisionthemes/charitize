@@ -1,0 +1,46 @@
+.page-content,
+.entry-summary {
+  margin-top: 1em;
+}
+
+.entry-content{
+  @extend .entry-summary;
+  .image-left {
+    margin-right: 20px;
+    
+    @include small-device(){
+        margin-bottom: 20px;
+    }
+  }
+}
+
+.page-links {
+  font-weight: 700;
+  & span{
+    border: 1px solid $color__background-hr;
+    display: inline-block;
+    @include font-size(0.938);
+    height: 2em;
+    width: 2em;
+    line-height: 2;
+    margin: 0 3px 3px 3px;
+    text-align: center;
+  }
+
+  a{
+    @extend span;
+    background-color: #f7f7f7;
+    color: #313131;
+    &:hover,
+    &:focus{
+      background-color: #707070;
+      color: #ffffff;
+    }
+  }
+}
+
+.error404 {
+  .search-form{
+    margin-bottom: 30px;
+  }
+}

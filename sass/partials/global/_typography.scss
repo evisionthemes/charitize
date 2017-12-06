@@ -1,0 +1,84 @@
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $font__main; 
+  @include font-size(0.938);
+  line-height: $font__line-height-body;
+  font-weight: 400;
+}
+
+%heading {
+  font-family: $font__title;
+  color: $color__text-title;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin-top: 8px;
+  margin-bottom: 10px;
+  line-height: $font__line-height-title;
+  @include clearfix();
+  @extend %heading;
+  & a{
+    @extend %heading;
+    &:hover{
+      color: $color__link-hover;
+    }
+  }
+}
+
+h1{
+  @include font-size(2);
+  font-weight: 700;
+}
+
+h2 {
+  @include font-size(1.5);
+  font-weight: 700;
+}
+
+h3 {
+  @include font-size(1);
+}
+
+h4 {
+  @include font-size(0.875);
+}
+
+h5 {
+  @include font-size(0.750);
+}
+
+h6 {
+  @include font-size(0.688);
+}
+
+@include mobile-device{
+
+  h1{
+    @include font-size(1.5);
+  }
+
+  h2 {
+    @include font-size(1.125);
+  }
+
+  h3 {
+    @include font-size(1);
+  }
+
+  h4 {
+    @include font-size(0.875);
+  }
+
+  h5 {
+    @include font-size(0.750);
+  }
+
+  h6 {
+    @include font-size(0.625);
+  }
+}

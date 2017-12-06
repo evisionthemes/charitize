@@ -1,0 +1,28 @@
+// ***** CALLBACK SECTION ***** //
+
+.wrapper-callback{
+  @include cover-background;
+  color: $color__text-white;
+  line-height: $font__line-height-pre;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  position: relative;
+  text-align: center;
+  @include bg-attachment(scroll);
+  background-position:left top;
+  @include cover-background();
+  background-repeat: repeat;
+  width:100%;
+  @include transition(background-position 0.5s linear);
+  h2{
+    @include font-size(2);
+    color: $color__text-white;
+    text-transform: capitalize;
+  }
+  .btn-holder{
+    margin-top: 40px;
+    a{
+      display: inline-block;
+    }
+  }
+}

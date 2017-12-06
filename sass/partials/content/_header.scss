@@ -1,0 +1,121 @@
+.site-header {
+  background-color: $color__background-body;
+  position: relative;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  @include clearfix();
+  @include mf-small-device(){
+    .site-header {
+      padding-left: 4.5455%;
+      padding-right: 4.5455%;
+    }
+
+    .site-header-main {
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+    }
+  }
+
+  .site-title{
+      margin-bottom: 5px;
+      margin-top: 5px;
+      a{ 
+        color: $color__text-site-title;
+        font-family: $font__site-title;
+        @include font-size(2);
+        font-weight: 700;
+        &:hover{
+          color: $color__text-site-title-hover;
+      }
+    }
+  }
+
+  .site-description {
+    color: $color__text-site-title;
+    font-family: $font__site-title;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 5px;
+    @include font-size(0.813);
+  }
+
+  .header-btn{
+    vertical-align: top;
+    display: inline-block;
+    @include mf-large-device(){
+      float: right;    
+    }
+
+    @include medium-device(){
+      margin-right: 15px;
+    }
+
+    .button{
+      display: inline-block;
+      padding: 14px 18px 15px;
+      &:hover,
+      &:focus,
+      &:active{
+        background-color: $color__background-primary;
+        border-color: $color__background-primary;
+      }
+    }
+  }
+  
+  @include mobile-device(){
+    .site-branding{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .button{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  // .go-right{
+  //   left: 75%;
+  // }
+  
+  // .go-left{
+  //   right: 25%;
+  // }
+}
+
+#fixedhead{
+ background-color: $color__background-body;
+ border-bottom: 1px solid darken($color__border_base_light, 13%);
+ padding-bottom: 10px;
+ padding-top: 10px;
+ position: fixed;
+ top: -170px;
+ width: 100%;
+ z-index: 9999;
+ @include transition( top .5s linear);
+  .button{
+    @include font-size(0.813);
+  }
+  @include mobile-device(){
+    .site-branding{
+      display: none;
+    }
+    .button{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.display-info{
+  background-color: darken($color__background_base_light, 10%);
+  color: darken($color__text-body, 20%);
+  @include font-size(1.125);
+  padding-bottom: 10%;
+  padding-top: 8%;
+  text-align: center;
+  a{
+    display: inline-block;
+    margin-top: 20px;
+  }
+}

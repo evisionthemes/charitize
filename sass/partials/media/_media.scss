@@ -1,0 +1,87 @@
+.wp-caption {
+  margin-bottom: 0.8em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.wp-caption.alignnone img{
+  float: left;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.gallery-cols-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-cols-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+.gallery-cols-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-cols-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-cols-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+.gallery-cols-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+.gallery-cols-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-cols-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-caption {
+  display: block;
+}
+
+@media screen and (max-width: 767px){
+  .gallery-cols-5 .gallery-item,
+  .gallery-cols-6 .gallery-item,
+  .gallery-cols-7 .gallery-item,
+  .gallery-cols-8 .gallery-item,
+  .gallery-cols-9 .gallery-item {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .gallery-cols-3 .gallery-item,
+  .gallery-cols-4 .gallery-item {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,304 @@
+// ====== Center block ===== //
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// ====== Clearfix ===== //
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// ====== Rem output with px fallback ===== //
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
+}
+
+// ====== Line Height ===== //
+@mixin line-height($heightValue: 1 ){
+  line-height: ($heightValue * 16) * 1px;
+  line-height: $heightValue * 1em;
+}
+
+// ====== Font Breakpoint Mixin ===== //
+@mixin font($group, $id:regular){
+  @each $font in $font-stack{
+    @if($group == map-get($font, group) and $id == map-get($font, id)){
+      font-family: map-get($font, font);
+      font-weight: map-get($font, weight);
+      font-style: map-get($font, style);
+    }
+  }
+}
+
+// Retina Image (SVG background images with PNG and retina fallback)
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        @media screen and (-moz-min-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 3/2), screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        }
+    }
+}
+
+// CSS3 filter
+
+// https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html 
+//
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+// Mixins for semi-transparent colors
+
+@mixin trasparent-bg($attribute, $color, $opacity){
+  -webkit-#{$attribute}: rgba($color, $opacity);
+  -moz-#{$attribute}: rgba($color, $opacity);
+  -ms-#{$attribute}: rgba($color, $opacity);
+  -o-#{$attribute}: rgba($color, $opacity);
+  #{$attribute}: rgba($color, $opacity);
+}
+
+// ====== CSS3 Transform Properties ===== //
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+      @if $vendors {
+        @each $vendor in $vendors {
+          #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+      }
+      #{$property}: #{$value};
+}
+
+
+// ====== Box shadow Mixing ===== //
+@mixin box-shadow($value...) {
+  -webkit-box-shadow: $value;
+     -moz-box-shadow: $value;
+      -ms-box-shadow: $value;
+       -o-box-shadow: $value;
+          box-shadow: $value;
+}
+
+// ====== Border Radius Mixing ===== //
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// ====== Box Sizing(border box) Mixing ===== //
+@mixin border-box{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+} 
+
+// ====== Box Sizing(content box) Mixing ===== //
+@mixin content-box{
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+      -ms-box-sizing: content-box;
+       -o-box-sizing: content-box;
+          box-sizing: content-box;
+} 
+
+// ====== Transition Mixing ===== //
+@mixin transition ($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+      -ms-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+
+// ====== Cover Background Image Mixing ===== //
+@mixin cover-background-image($img-uri) {
+    background: url($img-uri) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+// ====== Cover Background Mixing ===== //
+@mixin cover-background {
+    background: no-repeat top center; 
+      -webkit-background-size: cover;
+         -moz-background-size: cover;
+           -o-background-size: cover;
+              background-size: cover;
+}
+
+// ====== Fixed Background Mixing ===== //
+@mixin fixed-background {
+    background: no-repeat top center; 
+      -webkit-background-size: fixed;
+         -moz-background-size: fixed;
+           -o-background-size: fixed;
+              background-size: fixed;
+}
+
+// ====== Background attachement Mixing ===== //
+
+@mixin bg-attachment($value) {
+  -webkit-background-attachment: $value;
+     -moz-background-attachment: $value;
+      -ms-background-attachment: $value;
+       -o-background-attachment: $value;
+          background-attachment: $value;
+}
+
+// ====== Transform Mixing ===== //
+@mixin transform ($property, $value) {
+    -webkit-transform: $property($value);
+       -moz-transform: $property($value);
+        -ms-transform: $property($value);
+         -o-transform: $property($value);
+            transform: $property($value);
+}
+
+// ====== Animation Mixing ===== //
+@mixin animation($atr...){
+  -webkit-animation: $atr;
+     -moz-animation: $atr;
+      -ms-animation: $atr;
+       -o-animation: $atr;
+          animation: $atr;
+}
+
+// ====== Mixin Mixing ===== //
+
+@mixin keyframes($name){
+  @-webkit-keyframes #{$name}{
+    @content;
+  }
+  @-moz-keyframes #{$name}{
+    @content;
+  }
+  @keyframes #{$name}{
+    @content;
+  }
+}
+
+// ====== Opacity Mixing ===== //
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+// Prefix Properties
+@mixin prefix($property, $value, $prefixes: ()){
+  @each $prefix in $prefixes {
+    #{ $prefix + $property }: $value;
+  }
+
+  #{$property}: $value;
+}
+
+// uses //
+// .selector {
+//   @include prefix(transform, rotate(45deg), webkit ms);
+// }
+
+// width equal height
+// uses
+//.icon {
+//  @include size(32px);
+//}
+
+//.cover {
+//  @include size(100%, 10em);
+//} 
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+//media query
+// ====== Mobile First Style ===== //
+@mixin mf-large-device {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mf-small-device {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mf-mobile-device {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mf-mini-mobile-device {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+// ====== Desktop First Style ===== //
+@mixin medium-device {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin small-device {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin mobile-device {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mini-mobile-device {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}

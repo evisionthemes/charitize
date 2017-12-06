@@ -1,0 +1,31 @@
+.footer-widget{
+  background-color: $color__background_base_light;
+}
+
+.site-footer {
+  background-color: $color__background-dark;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  .copyright{
+    color: $color__text-light;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  .site-info {
+    color: $color__text-light;
+    display: inline-block;
+    text-align: center;
+    a{
+      color: $color__text-white;
+      &:hover{
+        color: $color__text-light;
+      }
+    }
+  }
+}
+
+
+

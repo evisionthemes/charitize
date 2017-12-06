@@ -1,0 +1,94 @@
+// ***** ACTIVITY SECTION ***** //
+.wrapper-activity{
+  .singlethumb{
+      a{
+        display: block;
+        height: 100%;
+      }
+      .thumb-holder{
+        img.desaturate{
+          vertical-align: top;
+          width: 100%;
+        }
+      }
+      .content-area{
+        background-color: $color__background_base_light;
+        padding: 15px 30px 40px;
+        position: relative;
+        z-index: 1;
+        @include transition(all 0.3s linear);
+        &:before{
+          border-bottom: 20px solid $color__border-primary;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          content: "";
+          height: 20px;
+          left: 0;
+          margin: auto;
+          opacity: 0;
+          position: absolute;
+          right: 0;
+          top: -20px;
+          width: 20px;
+        }
+        h2{
+          text-transform: uppercase;
+          @include font-size(1.125);
+        }
+        .divider{
+          background-color: $color__background-primary;
+          content: "";
+          display: block;
+          height: 2px;
+          width: 50px;
+          @include transition(background-color 0.3s linear, width 0.8s linear);
+        }
+        .content-text{
+          color: $color__text-body;
+          line-height: 22px;
+          margin-top: 35px;
+          @include font-size(0.875);
+        }
+      }
+
+    &:hover,
+    &:focus,
+    &:active{
+      .thumb-holder{
+        img.desaturate{
+          margin-left: auto;
+          margin-right: auto;
+          @include filter(grayscale, 0%);
+        }
+      }
+      .content-area{
+        background-color: $color__background-primary;
+        position: relative;
+        &:before{
+          opacity: 1;
+          top: -20px;
+        }
+      }
+      h2, .content-text{
+        color: $color__text_base_light;
+      }
+      .divider{
+        background-color: $color__background_base_light !important;
+        transition: 0.5s;
+        width: 100%;
+      }
+    }
+  }
+  .slick-dots{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    position: static;
+    li{
+      button{
+        &:before{
+          @include font-size(0.750);
+        }
+      }
+    }
+  }
+}

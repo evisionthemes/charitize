@@ -1,0 +1,39 @@
+== Changelog ==
+
+= 1.1.0 =
+* Fixed the page date issue
+
+= 1.0.9 =
+* Fixed the logo issue
+
+= 1.0.8 =
+* Minor Style fixing
+
+= 1.0.7 =
+* Minor Style fixing
+* Breadcrum managed
+
+= 1.0.6 =
+* Minor Style fixing
+* Breadcrum changed and fixed
+
+= 1.0.5 =
+* Updated compatibility 4.7
+* Custom CSS migration
+* Update to pro button added
+* Woocommerce compatibility added
+
+= 1.0.4 =
+* Demo content removed
+
+= 1.0.3 =
+* Minor bug fixing
+
+= 1.0.2 =
+* Bug fixing
+
+= 1.0.1 =
+* Bug fixing
+
+= 1.0.0 =
+* Initial released
