@@ -4,7 +4,7 @@ Theme URI: http://evisionthemes.com/product/charitize-free-theme/
 Author: evisiontheme
 Author URI: http://evisionthemes.com/
 Description: Charitize, a simple & clean WordPress theme for all the Non-Profit Organizations, Non-Profit Associations, Foundations or churches, political parties etc. With lots of customization features, you can easily built a professional website for your organization. This theme supports most of the popular plugins like contact from 7, jetpack, PS sitemap etc.
-Version: 1.1.0
+Version: 1.1.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: charitize
@@ -6854,7 +6854,6 @@ body.home.page #secondary {
   padding-bottom: 10px;
   padding-top: 10px;
   position: fixed;
-  top: -170px;
   width: 100%;
   z-index: 9999;
   -webkit-transition: top 0.5s linear;

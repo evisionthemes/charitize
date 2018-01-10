@@ -75,11 +75,11 @@ jQuery(document).ready(function ($) {
     // back to top animation
 
     $('#gotop').click(function(){
-      $('body').animate({scrollTop: '0px'},1000);
+      $('html,body').animate({scrollTop: '0px'},1000);
     });
 
     // waypoints
-    if ( $('body').hasClass('home') && $('.wrapper-callback').length > 0 ) {
+    if ( $('html,body').hasClass('home') && $('.wrapper-callback').length > 0 ) {
       var waypoint = new Waypoint({
         element: $('.wrapper-callback'),
         offset: '0',
@@ -95,23 +95,26 @@ jQuery(document).ready(function ($) {
     // header fix
     var initialPosition = $(window).scrollTop();
     $(window).scroll(function() {
-      var getScrollTop = $('body').scrollTop(),
+      var getScrollTop = $('html,body').scrollTop(),
           mastheadHeight = $('#masthead').outerHeight(),
           headerFixed = $('#fixedhead');
+
+        console.log(mastheadHeight, 'hhhhe');
+
           
       if (getScrollTop > initialPosition) {
-        $( '#fixedhead' ).css({'top': -170});
+        $( '#fixedhead' ).css({'top': - mastheadHeight});
       } else {
         $( '#fixedhead' ).css({'top': 0});
       }
 
       if ( getScrollTop == 0 ) { 
-       $( '#fixedhead' ).css({'top': -170});
+       $( '#fixedhead' ).css({'top': - mastheadHeight});
       }
       initialPosition = getScrollTop;
 
       // back to top button visible on scroll
-      var scrollTopPosition = $('body').scrollTop();
+      var scrollTopPosition = $('html,body').scrollTop();
       if( scrollTopPosition > 240 ) {
         $('#gotop').css({'bottom': 25});
       } else {

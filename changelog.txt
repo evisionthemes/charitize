@@ -1,4 +1,6 @@
 == Changelog ==
+= 1.1.1 =
+* Fixed header issue solved when logo size is bigger
 
 = 1.1.0 =
 * Fixed the page date issue
