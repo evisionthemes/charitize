@@ -99,13 +99,13 @@ jQuery(document).ready(function ($) {
           mastheadHeight = $('#masthead').outerHeight(),
           headerFixed = $('#fixedhead');
 
-        console.log(mastheadHeight, 'hhhhe');
+        // console.log(mastheadHeight, 'hhhhe');
 
           
       if (getScrollTop > initialPosition) {
-        $( '#fixedhead' ).css({'top': - mastheadHeight});
-      } else {
         $( '#fixedhead' ).css({'top': 0});
+      } else {
+        $( '#fixedhead' ).css({'top': - mastheadHeight});
       }
 
       if ( getScrollTop == 0 ) { 
@@ -120,7 +120,11 @@ jQuery(document).ready(function ($) {
       } else {
         $('#gotop').css({'bottom': -100});
       }
+
+      $('header#fixedhead').css('display', 'block');
     });
+
+    $('header#fixedhead').css('display', 'none');
 
     // margin top social
     var mastheadHeight = $('#masthead').outerHeight(),
