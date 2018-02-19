@@ -292,13 +292,11 @@ if ( ! function_exists( 'charitize_header' ) ) :
                                                 </nav><!-- #site-navigation -->
                                             </div><!-- site-header-menu -->
                                         </div>
-                                        <?php if (!is_home()) { ?>
-                                            <div class="col-xs-3 mb-device go-right">
+                                         <div class="col-xs-3 mb-device go-right">
                                                 <span class="header-btn">
                                                     <a href="<?php echo esc_url($charitize_customizer_all_values['charitize-donate-link'] );?>" class="button"><?php echo esc_html($charitize_customizer_all_values['charitize-donate-button-text'] );?></a>
                                                 </span>
                                             </div>
-                                        <?php } ?>
                                     </div>
                                 </div>
                             </div>
