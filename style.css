@@ -6739,11 +6739,15 @@ body.evision-left-sidebar #secondary {
 body.evision-no-sidebar #secondary {
   display: none;
 }
-
+/*
 body.home.page #secondary {
   width: 100%;
 }
-
+*/
+body.home.page main#main,
+body.home.page #secondary  {
+  margin-top: 20px;
+}
 @media screen and (max-width: 767px) {
   body.evision-left-sidebar #primary,
   body.evision-left-sidebar #secondary,
