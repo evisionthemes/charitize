@@ -52,4 +52,6 @@ require get_template_directory().'/inc/hooks/wp-head.php';
  /* 
  Layout additions
  */
- require get_template_directory() . '/inc/post-meta/layout-meta.php';
+require get_template_directory() . '/inc/post-meta/layout-meta.php';
+
+require get_template_directory().'/inc/hooks/customizer-link.php';

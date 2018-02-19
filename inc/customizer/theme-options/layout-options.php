@@ -6,6 +6,7 @@ global $charitize_customizer_defaults;
 
 /*defaults values*/
 $charitize_customizer_defaults['charitize-default-banner-image'] = get_template_directory_uri().'/assets/img/callup-banner.png';
+$charitize_customizer_defaults['charitize-enable-static-page'] = 0;
 $charitize_customizer_defaults['charitize-default-layout'] = 'right-sidebar';
 $charitize_customizer_defaults['charitize-archive-layout'] = 'thumbnail-and-excerpt';
 $charitize_customizer_defaults['charitize-archive-image-align'] = 'full';
@@ -20,6 +21,22 @@ $charitize_sections['charitize-layout-options'] =
         'title'          => __( 'Layout Options', 'charitize' ),
         'panel'          => 'charitize-theme-options',
     );
+
+// static front page enable option
+$charitize_settings_controls['charitize-enable-static-page'] =
+    array(
+        'setting' =>     array(
+            'default'              => $charitize_customizer_defaults['charitize-enable-static-page'],
+        ),
+        'control' => array(
+            'label'                 =>  __( 'Enable Static Front Page', 'charitize' ),
+            'description'           =>  __( 'If you disable this the static page will be disappera form the home page and other section from customizer will reamin as it is','charitize' ),
+            'section'               => 'charitize-layout-options',
+            'type'                  => 'checkbox',
+            'priority'              => 10,
+        )
+    );
+
 
 $charitize_settings_controls['charitize-default-banner-image'] =
     array(

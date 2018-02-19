@@ -1,36 +1,55 @@
 <?php
 /**
  * The template for displaying home page.
- * @package Charitize
+ * @package business-craft
  */
 global $charitize_customizer_all_values;
+
 get_header();
 if ( 'posts' == get_option( 'show_on_front' ) ) {
-	include( get_home_template() );
-    }
+    include( get_home_template() );    
+} else {
+   
+    
+           
+        
+        /**
+         * business_craft_homepage hook
+         * @since business-craft 1.0.0
+         *
+         * @hooked business_craft_homepage -  10
+         * @sub_hooked business_craft_homepage -  30
+         * @hooked busine_Craft_aboutus _page -16
+         * @hooked business_craft_our_service -21
+         */
+        do_action( 'charitize_action_front_page' );
 
-else{
-	if (($charitize_customizer_all_values['charitize-feature-slider-enable'] != 1) && ($charitize_customizer_all_values['charitize-activities-enable'] != 1 ) && ($charitize_customizer_all_values['charitize-donate-enable'] != 1 )) {
-		if ( current_user_can( 'edit_theme_options' ) ) { ?>
-			<section class="wrapper display-info">
-				<div class="container">
-				<?php echo sprintf(
-					__( 'All Section are based on page. Enable each Section from customizer for </br> slider: Home/Front Main Slider -> Setting Options -> Enable. likewise to other sections </br> %s', 'charitize' ),
-					'<a class="button" href="' . esc_url( admin_url( 'customize.php' ) ) . '">' . __( 'click here', 'charitize' ) . '</a>'
-					); ?>
-				</div>
-			</section>
-		<?php }
-	}	
-	else{
-		/**
-		 * charitize_action_front_page hook
-		 * @since Charitize 1.0.0
-		 *
-		 * @hooked charitize_action_front_page -  10
-		 * @sub_hooked charitize_action_front_page -  30
-		 */
-		do_action( 'charitize_action_front_page' );
-	}
+        $charitize_static_page = absint($charitize_customizer_all_values['charitize-enable-static-page']);
+        // $business_craft_static_page = 1;
+        if ($charitize_static_page  != 0) { ?>
+            <div id="content" class="site-content container">
+                <div id="primary" class="content-area col-sm-8">
+                    <main id="main" class="site-main" role="main">
+                        <?php
+                        while ( have_posts() ) : the_post();
+
+                            get_template_part( 'template-parts/content', 'page' );
+
+                            // If comments are open or we have at least one comment, load up the comment template.
+                            if ( comments_open() || get_comments_number() ) :
+                                comments_template();
+                            endif;
+
+                        endwhile; // End of the loop.
+                        ?>
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+                <?php get_sidebar(); ?>                
+            </div>
+        <?php }
+        
+     do_action('charitize_customizer_link');
+
 }
 get_footer();
