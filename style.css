@@ -6696,8 +6696,8 @@ body.home.blog .site-content {
 @media screen and (max-width: 767px) {
   .site-content #primary,
   .site-content #secondary {
-    float: none;
-    width: 100%;
+/*    float: none;
+*/    width: 100%;
   }
 }
 
