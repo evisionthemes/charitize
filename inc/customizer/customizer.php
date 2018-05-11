@@ -28,6 +28,7 @@ if(!defined('EVISION_CUSTOMIZER_NAME')){
  *
  * @since charitize 1.0
  */
+
 if ( ! function_exists( 'charitize_reset_options' ) ) :
     function charitize_reset_options( $reset_options ) {
         set_theme_mod( EVISION_CUSTOMIZER_NAME, $reset_options );
@@ -36,7 +37,9 @@ endif;
 /**
  * Customizer framework added.
  */
-require get_template_directory() . '/inc/frameworks/evision-customizer/evision-customizer.php';
+// require get_template_directory() . '/inc/frameworks/evision-customizer/evision-customizer.php';
+$Charitize_frameworks_path = charitize_file_directory('inc/frameworks/evision-customizer/evision-customizer.php');
+require $Charitize_frameworks_path;
 
 global $charitize_panels;
 global $charitize_sections;
@@ -47,37 +50,51 @@ global $charitize_customizer_defaults;
 /******************************************
 Modify Site Identity sections
  *******************************************/
-require get_template_directory().'/inc/customizer/site-identity/site-identity.php';
+// require get_template_directory().'/inc/customizer/site-identity/site-identity.php';
+$Charitize_site_identity_path = charitize_file_directory('inc/customizer/site-identity/site-identity.php');
+require $Charitize_site_identity_path;
 
 /******************************************
 Modify Site Color sections
  *******************************************/
-require get_template_directory() . '/inc/customizer/colors/general.php';
+// require get_template_directory() . '/inc/customizer/colors/general.php';
+$Charitize_colors_path = charitize_file_directory('inc/customizer/colors/general.php');
+require $Charitize_colors_path;
 
 /******************************************
 Modify Site Font sections
  *******************************************/
-require get_template_directory() . '/inc/customizer/fonts/font-family.php';
+// require get_template_directory() . '/inc/customizer/fonts/font-family.php';
+$Charitize_fonts_path = charitize_file_directory('inc/customizer/fonts/font-family.php');
+require $Charitize_fonts_path;
 
 /******************************************
 Modify Site Slider sections
  *******************************************/
-require get_template_directory() . '/inc/customizer/home-slider/panel.php';
+// require get_template_directory() . '/inc/customizer/home-slider/panel.php';
+$Charitize_home_slider_path = charitize_file_directory('inc/customizer/home-slider/panel.php');
+require $Charitize_home_slider_path;
 
 /******************************************
 Modify Site Activities sections
  *******************************************/
-require get_template_directory() . '/inc/customizer/home-activities/panel.php';
+// require get_template_directory() . '/inc/customizer/home-activities/panel.php';
+$Charitize_home_activities_path = charitize_file_directory('inc/customizer/home-activities/panel.php');
+require $Charitize_home_activities_path;
 
 /******************************************
 Modify Site Donate sections
  *******************************************/
-require get_template_directory() . '/inc/customizer/home-donate/panel.php';
+// require get_template_directory() . '/inc/customizer/home-donate/panel.php';
+$Charitize_home_donate = charitize_file_directory('inc/customizer/home-donate/panel.php');
+require $Charitize_home_donate;
 
 /******************************************
 Modify Site Theme Options sections
  *******************************************/
-require get_template_directory() . '/inc/customizer/theme-options/panel.php';
+// require get_template_directory() . '/inc/customizer/theme-options/panel.php';
+$Charitize_theme_options_path = charitize_file_directory('inc/customizer/theme-options/panel.php');
+require $Charitize_theme_options_path;
 
 
 /*Resetting all Values*/
@@ -87,6 +104,7 @@ require get_template_directory() . '/inc/customizer/theme-options/panel.php';
  *
  * @since charitize 1.0
  */
+
 global $charitize_customizer_defaults;
 $charitize_customizer_defaults['charitize-customizer-reset'] = '';
 if ( ! function_exists( 'charitize_customizer_reset' ) ) :

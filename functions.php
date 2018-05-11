@@ -31,7 +31,9 @@ if( !function_exists('charitize_file_directory') ){
 /**
  * require Charitize int.
  */
-require get_template_directory() . '/inc/init.php';
+// require get_template_directory() . '/inc/init.php';
+$Charitize_init_path = charitize_file_directory('inc/init.php');
+require $Charitize_init_path;
 
 
 if ( ! function_exists( 'charitize_setup' ) ) :
@@ -213,21 +215,29 @@ add_action( 'wp_enqueue_scripts', 'charitize_scripts' );
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+// require get_template_directory() . '/inc/template-tags.php';
+$Charitize_template_path = charitize_file_directory('inc/template-tags.php');
+require $Charitize_template_path;
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+// require get_template_directory() . '/inc/extras.php';
+$Charitize_extras_path = charitize_file_directory('inc/extras.php');
+require $Charitize_extras_path;
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+// require get_template_directory() . '/inc/jetpack.php';
+$Charitize_jetpack_path = charitize_file_directory('inc/jetpack.php');
+require $Charitize_jetpack_path;
 
 
 /*update to pro link*/
-require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/charitize/class-customize.php' );
+// require_once( trailingslashit( get_template_directory() ) . 'trt-customize-pro/charitize/class-customize.php' );
+$Charitize_trt_update_pro_path = charitize_file_directory('trt-customize-pro/charitize/class-customize.php');
+require $Charitize_trt_update_pro_path;
 
 /*breadcrum function*/
 

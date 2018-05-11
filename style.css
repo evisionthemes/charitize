@@ -4,7 +4,7 @@ Theme URI: http://evisionthemes.com/product/charitize-free-theme/
 Author: evisiontheme
 Author URI: http://evisionthemes.com/
 Description: Charitize, a simple & clean WordPress theme for all the Non-Profit Organizations, Non-Profit Associations, Foundations or churches, political parties etc. With lots of customization features, you can easily built a professional website for your organization. This theme supports most of the popular plugins like contact from 7, jetpack, PS sitemap etc.
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Follow Documentation: http://doc.evisionthemes.com/charitize/
@@ -39,6 +39,7 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -983,20 +984,19 @@ dt {
 }
 
 .widget ul, .blog article.hentry ul,
-#blog-post article.hentry ul,
-.search article.hentry ul,
-.archive article.hentry ul,
-.tag article.hentry ul,
-.category article.hentry ul,
 #ak-blog-post article.hentry ul,
-.page article.hentry ul,
-.single article.hentry ul,
 .woocommerce article.hentry ul, .woocommerce .site-main ul {
   padding-left: 0;
   list-style: none;
 }
 
 .widget li, .blog article.hentry li,
+.woocommerce article.hentry li, .woocommerce .site-main li {
+  display: block;
+  padding-bottom: 9px;
+  padding-top: 8px;
+}
+
 #blog-post article.hentry li,
 .search article.hentry li,
 .archive article.hentry li,
@@ -1004,9 +1004,7 @@ dt {
 .category article.hentry li,
 #ak-blog-post article.hentry li,
 .page article.hentry li,
-.single article.hentry li,
-.woocommerce article.hentry li, .woocommerce .site-main li {
-  display: block;
+.single article.hentry li {
   padding-bottom: 9px;
   padding-top: 8px;
 }
@@ -4388,7 +4386,7 @@ select,
 textarea {
   font-family: "Lato", sans-serif;
   font-size: 15.008px;
-  font-size: 0.938rem;
+  font-size: 1rem;
   line-height: 1.5;
   font-weight: 400;
 }

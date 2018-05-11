@@ -9,7 +9,11 @@ $charitize_panels['charitize-donate-panel'] =
 
 
 /*donate section enable control */
-require get_template_directory().'/inc/customizer/home-donate/options.php';
+// require get_template_directory().'/inc/customizer/home-donate/options.php';
+$charitize_customizer_home_donote_options_path = charitize_file_directory('inc/customizer/home-donate/options.php');
+require $charitize_customizer_home_donote_options_path;
 
 /*donate selection settings */
-require get_template_directory().'/inc/customizer/home-donate/settings.php';
+// require get_template_directory().'/inc/customizer/home-donate/settings.php';
+$charitize_customizer_home_donote_setting_path = charitize_file_directory('inc/customizer/home-donate/settings.php');
+require $charitize_customizer_home_donote_setting_path;

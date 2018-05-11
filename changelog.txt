@@ -1,4 +1,7 @@
 == Changelog ==
+= 1.1.2 =
+* font size increase and list style change
+
 = 1.1.1 =
 * Fixed header issue solved when logo size is bigger
 
