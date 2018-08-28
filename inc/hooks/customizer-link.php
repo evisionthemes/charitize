@@ -23,8 +23,8 @@ if ( ! function_exists('customizer_link') ) :
             <section class="wrapper display-info">
                 <div class="container">
                 <?php echo sprintf(
-                    __( 'All Section are based on page. Enable each Section from customizer for </br> slider: Home/Front Main Slider -> Setting Options -> Enable. likewise to other sections </br> %s', 'charitize' ),
-                    '<a class="button" href="' . esc_url( admin_url( 'customize.php' ) ) . '">' . __( 'click here', 'charitize' ) . '</a>'
+                    __( 'Enable each Section from Customizer <br>eg. For Slider: Home/Front Main Slider > Setting Options > Enable Feature Slider. <br>Start customizing by clicking the below button.<br> %s', 'charitize' ),
+                    '<a class="button" href="' . esc_url( admin_url( 'customize.php' ) ) . '">' . __( 'Customize', 'charitize' ) . '</a>'
                     ); ?>
                 </div>
             </section>
