@@ -264,3 +264,16 @@ if ( ! function_exists( 'charitize_simple_breadcrumb' ) ) :
 
 endif;
 
+
+
+if ( !function_exists('evt_customizer_control_scripts') ) :
+	/**
+	 * Customizer control styles and scripts.
+	 */
+	function evt_customizer_control_scripts()
+	{
+	    wp_enqueue_style('evt-customize-controls-style', get_template_directory_uri() . '/assets/css/customizer.css');
+	}
+
+	add_action('customize_controls_enqueue_scripts', 'evt_customizer_control_scripts', 0);
+endif;
