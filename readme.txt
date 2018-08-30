@@ -9,7 +9,7 @@ Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-menu,
 
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -67,4 +67,4 @@ Activities area:
 
 = Does this theme support any plugins? =
 
-evision themes includes support for Infinite Scroll in Jetpack and conform 7.
+Charitize includes support for Infinite Scroll in Jetpack and Contact Form 7.
