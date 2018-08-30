@@ -8218,6 +8218,10 @@ body.single .entry-meta {
   margin-bottom: 1em;
 }
 
+.nav-links .nav-next {
+  float: right;
+}
+
 .site-content,
 .tmm .tmm_desc {
   line-height: 22px;
