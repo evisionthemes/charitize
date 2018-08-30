@@ -276,9 +276,14 @@ if ( ! function_exists( 'charitize_header' ) ) :
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-8">
-                                <div class="row">
+                                <div class="">
                                     <div class="nav-holder">
-                                        <div class="col-xs-9 mb-device go-left">
+                                        <div class="mb-device go-right">
+                                            <span class="header-btn">
+                                                <a href="<?php echo esc_url($charitize_customizer_all_values['charitize-donate-link'] );?>" class="button"><?php echo esc_html($charitize_customizer_all_values['charitize-donate-button-text'] );?></a>
+                                            </span>
+                                        </div>
+                                        <div class="mb-device go-left">
                                             <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="fa fa-bars"></span><?php __('MENU','charitize') ?></button>
                                             <div id="site-header-menu" class="site-header-menu">
                                                 <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'charitize' ); ?>">
@@ -292,11 +297,6 @@ if ( ! function_exists( 'charitize_header' ) ) :
                                                 </nav><!-- #site-navigation -->
                                             </div><!-- site-header-menu -->
                                         </div>
-                                         <div class="col-xs-3 mb-device go-right">
-                                                <span class="header-btn">
-                                                    <a href="<?php echo esc_url($charitize_customizer_all_values['charitize-donate-link'] );?>" class="button"><?php echo esc_html($charitize_customizer_all_values['charitize-donate-button-text'] );?></a>
-                                                </span>
-                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -335,9 +335,14 @@ if ( ! function_exists( 'charitize_header' ) ) :
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-8">
-                                <div class="row">
+                                <div class="">
                                     <div class="nav-holder">
-                                        <div class="col-xs-9 mb-device go-left">
+                                        <div class="mb-device go-right">
+                                            <span class="header-btn">
+                                                <a href="<?php echo esc_url($charitize_customizer_all_values['charitize-donate-link'] );?>" class="button"><?php echo esc_html($charitize_customizer_all_values['charitize-donate-button-text'] );?></a>
+                                            </span>
+                                        </div>
+                                        <div class="mb-device go-left">
                                             <button id="menu-toggle-fixed" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="fa fa-bars"></span><?php __('MENU','charitize') ?></button>
                                             <div id="site-header-menu-fixed" class="site-header-menu">
                                                 <nav id="site-navigation-fixed" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'charitize' ); ?>">
@@ -350,11 +355,6 @@ if ( ! function_exists( 'charitize_header' ) ) :
                                                     ?>
                                                 </nav><!-- #site-navigation -->
                                             </div><!-- site-header-menu -->
-                                        </div>
-                                        <div class="col-xs-3 mb-device go-right">
-                                            <span class="header-btn">
-                                                <a href="<?php echo esc_url($charitize_customizer_all_values['charitize-donate-link'] );?>" class="button"><?php echo esc_html($charitize_customizer_all_values['charitize-donate-button-text'] );?></a>
-                                            </span>
                                         </div>
                                     </div>
                                 </div>

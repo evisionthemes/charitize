@@ -1,8 +1,25 @@
 // On Document Load
 jQuery(window).load(function(){
+    nav_width();
+    
     //site loader
     jQuery('#wraploader').hide();
 });
+
+function nav_width() {
+  // responsive width if donate btn presents
+
+  var winWidth = jQuery(window).width();
+
+  var btn_width = jQuery('.nav-holder .mb-device.go-right .header-btn').width()+6;
+
+  if(winWidth >= 1200) {
+    jQuery('.nav-holder .mb-device.go-left').css({'padding-right': btn_width + 'px'});  
+  }
+  else {
+    jQuery('.nav-holder .mb-device.go-left').css({'padding-right': '0px'});  
+  }
+}
 
 // On Document Ready
 jQuery(document).ready(function ($) {
@@ -102,10 +119,23 @@ jQuery(document).ready(function ($) {
         // console.log(mastheadHeight, 'hhhhe');
 
           
-      if (getScrollTop > initialPosition) {
+      /*if (getScrollTop > initialPosition) {
         $( '#fixedhead' ).css({'top': 0});
       } else {
         $( '#fixedhead' ).css({'top': - mastheadHeight});
+      }*/
+      if (mastheadHeight > getScrollTop) {
+        $( '#fixedhead' ).css({'top': - mastheadHeight});
+      } else {
+        if($('body').hasClass('admin-bar')) {
+          if($(window).width() >= 601) 
+            $('#fixedhead').css({'top': jQuery('#wpadminbar').height() + 'px'});
+          else
+            $( '#fixedhead' ).css({'top': 0});
+        }
+        else {
+          $( '#fixedhead' ).css({'top': 0});
+        }
       }
 
       if ( getScrollTop == 0 ) { 
@@ -146,5 +176,7 @@ jQuery(document).ready(function ($) {
             mobileScreen = $(window).width();
           $( '#fixedhead' ).css({'width': mobileScreen });
           mobileScreenMargin(mobileScreen);
+
+      nav_width();
     });
 });
